@@ -17,6 +17,7 @@
 			$data['count_petugas'] = $this->M_admin->count_petugas();
 			$data['count_buku'] = $this->M_admin->count_buku();
 			$data['count_jurusan'] = $this->M_admin->count_jurusan();
+			$data['count_riwayat'] = $this->M_admin->count_riwayat();
 			$this->load->view('templates/user_header', $data);
 			$this->load->view('templates/user_topbar');
 			$this->load->view('templates/user_sidebar');
@@ -269,6 +270,24 @@
 														  Jurusan berhasil dihapus
 														</div>');
 			redirect('admin/jurusan');
+		}
+
+		public function riwayat_pengembalian(){
+			$data['judul'] = 'riwayat pengembalian';
+			$data['riwayat'] = $this->M_admin->get_riwayat();
+			$this->load->view('templates/user_header', $data);
+			$this->load->view('templates/user_topbar');
+			$this->load->view('templates/user_sidebar');
+			$this->load->view('admin/riwayat_pengembalian', $data);
+			$this->load->view('templates/user_footer');
+		}
+
+		public function hapus_riwayat($id){
+			$this->M_admin->hapus_riwayat($id);
+			$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">
+														  Riwayat pengembalian berhasil dihapus
+														</div>');
+			redirect('admin/riwayat_pengembalian');
 		}
 	}
 

@@ -62,6 +62,22 @@
 			return $this->db->get('jurusan')->num_rows();
 		}
 
+		public function get_riwayat(){
+			$query = "SELECT * FROM peminjaman 
+					JOIN buku ON peminjaman.kode_buku=buku.kode
+					JOIN mahasiswa ON peminjaman.nim_peminjam=mahasiswa.nim
+					WHERE peminjaman.status=2";
+			return $this->db->query($query)->result();
+		}
+
+		public function hapus_riwayat($id){
+			return $this->db->delete('peminjaman', ['id_peminjaman' => $id]);
+		}
+
+		public function count_riwayat(){
+			return $this->db->get_where('peminjaman', ['status' => 2])->num_rows();
+		}
+
 	}
 
  ?>

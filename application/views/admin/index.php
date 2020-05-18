@@ -12,7 +12,7 @@
     </div>
     <div class="col-xl-3 col-md-6">
 	    <a href="<?php echo base_url() ?>admin/buku" class="text-decoration-none">
-	        <div class="card bg-primary text-white mb-4">
+	        <div class="card bg-success text-white mb-4">
 	            <div class="card-body">Buku
 	            	<div class="display-4"><b><?php echo $count_buku ?></b></div>
 	            </div>
@@ -21,9 +21,18 @@
     </div>
     <div class="col-xl-3 col-md-6">
 	    <a href="<?php echo base_url() ?>admin/jurusan" class="text-decoration-none">
-	        <div class="card bg-primary text-white mb-4">
+	        <div class="card bg-secondary text-white mb-4">
 	            <div class="card-body">Jurusan
 	            	<div class="display-4"><b><?php echo $count_jurusan ?></b></div>
+	            </div>
+	        </div>
+	    </a>
+    </div>
+    <div class="col-xl-3 col-md-6">
+	    <a href="<?php echo base_url() ?>admin/riwayat_pengembalian" class="text-decoration-none">
+	        <div class="card bg-danger text-white mb-4">
+	            <div class="card-body">Riwayat pengembalian
+	            	<div class="display-4"><b><?php echo $count_riwayat ?></b></div>
 	            </div>
 	        </div>
 	    </a>

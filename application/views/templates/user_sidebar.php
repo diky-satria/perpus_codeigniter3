@@ -9,32 +9,32 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
-                             <div class="dropdown-divider"></div>
+                             <!-- <div class="dropdown-divider"></div> -->
                         <?php endif; ?>
                         <?php if($this->session->userdata('role_user') == 1 || $this->session->userdata('role_user') == 2): ?>
+                             <div class="dropdown-divider"></div>
                             <div class="sb-sidenav-menu-heading">Petugas</div>
                             <a class="nav-link" href="<?php echo base_url() ?>petugas/mahasiswa">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-address-book"></i></div>
                                 Data mahasiswa
                             </a>
                             <a class="nav-link" href="<?php echo base_url() ?>petugas">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-shopping-cart"></i></div>
                                 Peminjaman
                             </a>
-                             <div class="dropdown-divider"></div>
                         <?php endif; ?>
+                            <div class="dropdown-divider"></div>
                             <div class="sb-sidenav-menu-heading">Mahasiswa</div>
                             <a class="nav-link" href="<?php echo base_url() ?>mahasiswa">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-shopping-basket"></i></div>
                                 Peminjaman saya
                             </a>
-                            <div class="dropdown-divider"></div>
                             <a class="nav-link" href="<?php echo base_url() ?>mahasiswa/ubah_password">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-exchange-alt"></i></div>
                                 Ubah password
                             </a>
                             <a class="nav-link" data-toggle="modal" data-target="#logout">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-sign-out-alt"></i></div>
                                 Logout
                             </a>
                         </div>
